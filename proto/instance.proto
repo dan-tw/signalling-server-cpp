@@ -1,0 +1,121 @@
+syntax = "proto3";
+package proto;
+option go_package = "github.com/scalablepixelstreaming/framework/pkg/api/proto";
+
+// The interface implemented by Instance Manager Plugins
+service InstanceManagerPlugin
+{
+	// Attempts to allocate a Pixel Streaming instance for a newly-connected player
+	rpc AllocateInstance (AllocationRequest) returns (AllocationResponse) {}
+	
+	// Attempts to deallocate a Pixel Streaming instance once its controlling player has disconnected
+	rpc DeallocateInstance (DeallocationRequest) returns (DeallocationResponse) {}
+	
+	// Retrieves the current state of the specified Pixel Streaming instance
+	rpc GetInstanceState (InstanceStateRequest) returns (InstanceStateResponse) {}
+	
+	// Streams status updates for the specified Pixel Streaming instance until the instance is either ready or has failed to initialise
+	// (Note that this will only return a single response if the specified Pixel Streaming instance has not been allocated)
+	rpc WatchInstanceState (InstanceStateRequest) returns (stream InstanceStateResponse) {}
+
+	// Notify the instance manager jsut after we connect that we're a 'new' signalling server for 
+	// the intent of connected peers. This will allow an instance manager to clean up any 'orphaned' instances
+	rpc NotifyForOrphanRemoval(NotifyOrphanRemovalRequest) returns (NotifyOrphanRemovalResponse) {}
+}
+
+message AllocationRequest
+{
+	// The IP address that the newly-allocated Pixel Streaming instance should use to connect to the Signalling Server
+	string ip = 1;
+	
+	// The TCP port that the newly-allocated Pixel Streaming instance should use to connect to the Signalling Server
+	uint32 port = 2;
+}
+
+message AllocationResponse
+{
+	// Indicates whether the allocation succeeded or failed
+	bool succeeded = 1;
+	
+	// At most one of these fields will ever be set
+	oneof payload
+	{
+		// The unique ID of the allocated Pixel Streaming instance
+		// (Set when the allocation succeeded)
+		string instance = 2;
+		
+		// The message providing details of the error that occurred
+		// (Set when the allocation failed)
+		string error = 3;
+	}
+}
+
+message DeallocationRequest
+{
+	// The unique ID of the Pixel Streaming instance that should be deallocated
+	string instance = 1;
+}
+
+message DeallocationResponse
+{
+	// Indicates whether the deallocation succeeded or failed
+	bool succeeded = 1;
+	
+	// The message providing details of the error that occurred
+	// (Set when the deallocation failed)
+	string error = 2;
+}
+
+message InstanceStateRequest
+{
+	// The unique ID of the Pixel Streaming instance whose status we want to retrieve
+	string instance = 1;
+}
+
+message InstanceStateResponse
+{
+	// Represents the possible instance states
+	enum State {
+		
+		// No instance has been allocated with the specified ID
+		// (This state concludes a WatchInstanceState() response stream)
+		UNALLOCATED = 0;
+		
+		// The specified instance has been allocated and is being initialised
+		PENDING = 1;
+		
+		// The specified instance has been allocated but initialisation failed
+		// (This state concludes a WatchInstanceState() response stream)
+		FAILED = 2;
+		
+		// The specified instance has been initialised and is ready to accept player connections
+		// (This state concludes a WatchInstanceState() response stream)
+		READY = 3;
+	}
+	
+	// The unique ID of the Pixel Streaming instance
+	string instance = 1;
+	
+	// The current state of the Pixel Streaming instance
+	State state = 2;
+	
+	// Additional details about the current instance state, if any
+	// (This is useful for error messages and for sending multiple fine-grained status updates during the PENDING state)
+	string details = 3;
+}
+
+message NotifyOrphanRemovalRequest {
+	string name = 1;
+}
+
+
+message NotifyOrphanRemovalResponse {
+
+	// Returns wether or not we succeeded in our attempt at removing orphans
+	// This does not necessarily mean orphans were removed, more-so we have no errors
+	bool succeeded = 1;
+
+	// If we get an error during our attempt to remove orphans, it will be here
+	// If no error, this string will be empty.
+	string error = 2;
+}

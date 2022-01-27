@@ -1,0 +1,1432 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						60
+					]
+				},
+				{
+					"build" : "_deps/grpc-build",
+					"childIndexes" : 
+					[
+						2,
+						21,
+						22,
+						23,
+						24
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "build/_deps/grpc-src",
+					"targetIndexes" : 
+					[
+						57,
+						63,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						97,
+						100,
+						101,
+						102,
+						103
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp",
+					"childIndexes" : 
+					[
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp"
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl",
+					"childIndexes" : 
+					[
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl"
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/base",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/base",
+					"targetIndexes" : 
+					[
+						4,
+						10,
+						12,
+						29,
+						30,
+						31,
+						43,
+						44,
+						45,
+						53
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/algorithm",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/algorithm"
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/container",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/container",
+					"targetIndexes" : 
+					[
+						25,
+						42
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/debugging",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/debugging",
+					"targetIndexes" : 
+					[
+						8,
+						9,
+						11,
+						13,
+						27,
+						28,
+						46,
+						51
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/flags",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/flags",
+					"targetIndexes" : 
+					[
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/functional",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/functional"
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/hash",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/hash",
+					"targetIndexes" : 
+					[
+						5,
+						24
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/memory",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/memory"
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/meta",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/meta"
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/numeric",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/numeric",
+					"targetIndexes" : 
+					[
+						26
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/random",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/random",
+					"targetIndexes" : 
+					[
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/status",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/status",
+					"targetIndexes" : 
+					[
+						47
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/strings",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/strings",
+					"targetIndexes" : 
+					[
+						7,
+						48,
+						49,
+						50
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/synchronization",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/synchronization",
+					"targetIndexes" : 
+					[
+						23,
+						52
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/time",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time",
+					"targetIndexes" : 
+					[
+						6,
+						54,
+						55
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/types",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/types",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/utility",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/utility"
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/cares/cares",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "build/_deps/grpc-src/third_party/cares/cares",
+					"targetIndexes" : 
+					[
+						56,
+						58,
+						59,
+						62
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/protobuf",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1.3"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 4,
+					"source" : "build/_deps/grpc-src/third_party/protobuf/cmake",
+					"targetIndexes" : 
+					[
+						92,
+						93,
+						94,
+						98
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/boringssl-with-bazel",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 5,
+					"source" : "build/_deps/grpc-src/third_party/boringssl-with-bazel",
+					"targetIndexes" : 
+					[
+						61,
+						64,
+						99
+					]
+				},
+				{
+					"build" : "_deps/grpc-build/third_party/zlib",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.4.4"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 6,
+					"source" : "build/_deps/grpc-src/third_party/zlib",
+					"targetIndexes" : 
+					[
+						65,
+						66,
+						95,
+						96,
+						104,
+						105
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SignallingServer",
+					"targetIndexes" : 
+					[
+						0,
+						60
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "grpc",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						57,
+						63,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						97,
+						100,
+						101,
+						102,
+						103
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"name" : "absl",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						21
+					],
+					"name" : "c-ares",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						56,
+						58,
+						59,
+						62
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						22
+					],
+					"name" : "protobuf",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						92,
+						93,
+						94,
+						98
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						23
+					],
+					"name" : "BoringSSL",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						61,
+						64,
+						99
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						24
+					],
+					"name" : "zlib",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						65,
+						66,
+						95,
+						96,
+						104,
+						105
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "SignallingServer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SignallingServer-Debug-1ccb4c87dd1ce2616e5c.json",
+					"name" : "SignallingServer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "absl_bad_any_cast_impl::@87c8c94dbbf1d57501f7",
+					"jsonFile" : "target-absl_bad_any_cast_impl-Debug-fca41537bc16a7f6f506.json",
+					"name" : "absl_bad_any_cast_impl",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "absl_bad_optional_access::@87c8c94dbbf1d57501f7",
+					"jsonFile" : "target-absl_bad_optional_access-Debug-b8368493e4847ac20dd0.json",
+					"name" : "absl_bad_optional_access",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "absl_bad_variant_access::@87c8c94dbbf1d57501f7",
+					"jsonFile" : "target-absl_bad_variant_access-Debug-6a9f7e000f2349f58869.json",
+					"name" : "absl_bad_variant_access",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_base::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_base-Debug-36518dd70a640b9e1885.json",
+					"name" : "absl_base",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "absl_city::@8542769a9806a2305191",
+					"jsonFile" : "target-absl_city-Debug-0d6734f90f3396b72821.json",
+					"name" : "absl_city",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "absl_civil_time::@eaebfe3f746532af4ca1",
+					"jsonFile" : "target-absl_civil_time-Debug-965e794ccc6cb9920c37.json",
+					"name" : "absl_civil_time",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "absl_cord::@40dcdb164f5eca7d74f6",
+					"jsonFile" : "target-absl_cord-Debug-92fb93193dd8014fb21e.json",
+					"name" : "absl_cord",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "absl_debugging_internal::@661e937ce4f9d3fa350b",
+					"jsonFile" : "target-absl_debugging_internal-Debug-176564a8535f65143d64.json",
+					"name" : "absl_debugging_internal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "absl_demangle_internal::@661e937ce4f9d3fa350b",
+					"jsonFile" : "target-absl_demangle_internal-Debug-e7593b5f3ff1b95e9639.json",
+					"name" : "absl_demangle_internal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_dynamic_annotations::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_dynamic_annotations-Debug-5efe142f4d36d1b7c33d.json",
+					"name" : "absl_dynamic_annotations",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "absl_examine_stack::@661e937ce4f9d3fa350b",
+					"jsonFile" : "target-absl_examine_stack-Debug-f71c0b4c77781d75da08.json",
+					"name" : "absl_examine_stack",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_exponential_biased::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_exponential_biased-Debug-0b152749e36a3d6f7659.json",
+					"name" : "absl_exponential_biased",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "absl_failure_signal_handler::@661e937ce4f9d3fa350b",
+					"jsonFile" : "target-absl_failure_signal_handler-Debug-881f3cf2c42e755309d2.json",
+					"name" : "absl_failure_signal_handler",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "absl_flags::@8ba88fd0cb6991576730",
+					"jsonFile" : "target-absl_flags-Debug-294ee6a52847a7af1f31.json",
+					"name" : "absl_flags",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "absl_flags_config::@8ba88fd0cb6991576730",
+					"jsonFile" : "target-absl_flags_config-Debug-49aab75aa32b452ed502.json",
+					"name" : "absl_flags_config",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "absl_flags_internal::@8ba88fd0cb6991576730",
+					"jsonFile" : "target-absl_flags_internal-Debug-7b49e254967845553cc2.json",
+					"name" : "absl_flags_internal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "absl_flags_marshalling::@8ba88fd0cb6991576730",
+					"jsonFile" : "target-absl_flags_marshalling-Debug-57a09eaa077aa0d6b70d.json",
+					"name" : "absl_flags_marshalling",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "absl_flags_parse::@8ba88fd0cb6991576730",
+					"jsonFile" : "target-absl_flags_parse-Debug-ea7fbf45f3ee8897d353.json",
+					"name" : "absl_flags_parse",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "absl_flags_program_name::@8ba88fd0cb6991576730",
+					"jsonFile" : "target-absl_flags_program_name-Debug-2034d85632c85ff9839a.json",
+					"name" : "absl_flags_program_name",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "absl_flags_registry::@8ba88fd0cb6991576730",
+					"jsonFile" : "target-absl_flags_registry-Debug-01029194ed1abe20974f.json",
+					"name" : "absl_flags_registry",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "absl_flags_usage::@8ba88fd0cb6991576730",
+					"jsonFile" : "target-absl_flags_usage-Debug-d60d78c29bfd028c7f51.json",
+					"name" : "absl_flags_usage",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "absl_flags_usage_internal::@8ba88fd0cb6991576730",
+					"jsonFile" : "target-absl_flags_usage_internal-Debug-734ddfe53ba94fda1746.json",
+					"name" : "absl_flags_usage_internal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "absl_graphcycles_internal::@4e076f26d3adeded7f3a",
+					"jsonFile" : "target-absl_graphcycles_internal-Debug-86b4b758e22d33d53338.json",
+					"name" : "absl_graphcycles_internal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "absl_hash::@8542769a9806a2305191",
+					"jsonFile" : "target-absl_hash-Debug-a73978264d214495d3cd.json",
+					"name" : "absl_hash",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "absl_hashtablez_sampler::@9c0ca7ec0469c180685b",
+					"jsonFile" : "target-absl_hashtablez_sampler-Debug-5c6cefcfb63fd81fb791.json",
+					"name" : "absl_hashtablez_sampler",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "absl_int128::@49df67a123fe8bd3185d",
+					"jsonFile" : "target-absl_int128-Debug-2ec1586e62cf39ab145b.json",
+					"name" : "absl_int128",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "absl_leak_check::@661e937ce4f9d3fa350b",
+					"jsonFile" : "target-absl_leak_check-Debug-7f5804e43efe1b6a0595.json",
+					"name" : "absl_leak_check",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "absl_leak_check_disable::@661e937ce4f9d3fa350b",
+					"jsonFile" : "target-absl_leak_check_disable-Debug-88bce90da41fd1c35e4e.json",
+					"name" : "absl_leak_check_disable",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_log_severity::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_log_severity-Debug-810699c3e81812abeed6.json",
+					"name" : "absl_log_severity",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_malloc_internal::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_malloc_internal-Debug-a898fdba90c0509b095f.json",
+					"name" : "absl_malloc_internal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_periodic_sampler::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_periodic_sampler-Debug-30ac61ff08fa6269b318.json",
+					"name" : "absl_periodic_sampler",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_distributions::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_distributions-Debug-62bbef0ce8a636e6ada6.json",
+					"name" : "absl_random_distributions",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_internal_distribution_test_util::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_internal_distribution_test_util-Debug-69ea452bebca99a30ab4.json",
+					"name" : "absl_random_internal_distribution_test_util",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_internal_pool_urbg::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_internal_pool_urbg-Debug-c20e40904cefa474bc67.json",
+					"name" : "absl_random_internal_pool_urbg",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_internal_randen::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_internal_randen-Debug-ee6433aa89c8be324a5b.json",
+					"name" : "absl_random_internal_randen",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_internal_randen_hwaes::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_internal_randen_hwaes-Debug-c05378e1477611de7139.json",
+					"name" : "absl_random_internal_randen_hwaes",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_internal_randen_hwaes_impl::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_internal_randen_hwaes_impl-Debug-fcbb07ed9195fb8fec86.json",
+					"name" : "absl_random_internal_randen_hwaes_impl",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_internal_randen_slow::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_internal_randen_slow-Debug-a184d648d2805918df1c.json",
+					"name" : "absl_random_internal_randen_slow",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_internal_seed_material::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_internal_seed_material-Debug-d28830ec015e86c019c2.json",
+					"name" : "absl_random_internal_seed_material",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_seed_gen_exception::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_seed_gen_exception-Debug-3b7d79423c0d5c2705d6.json",
+					"name" : "absl_random_seed_gen_exception",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "absl_random_seed_sequences::@5a166797365f1ffe7a88",
+					"jsonFile" : "target-absl_random_seed_sequences-Debug-7944606e70053ff80e32.json",
+					"name" : "absl_random_seed_sequences",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "absl_raw_hash_set::@9c0ca7ec0469c180685b",
+					"jsonFile" : "target-absl_raw_hash_set-Debug-de83fdca1ff669763bf3.json",
+					"name" : "absl_raw_hash_set",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_raw_logging_internal::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_raw_logging_internal-Debug-5f85f90e1d2a3c21ba92.json",
+					"name" : "absl_raw_logging_internal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_scoped_set_env::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_scoped_set_env-Debug-f0abb4cfdeedd3c45d55.json",
+					"name" : "absl_scoped_set_env",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_spinlock_wait::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_spinlock_wait-Debug-d6b8d866b7b0c532b8a9.json",
+					"name" : "absl_spinlock_wait",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "absl_stacktrace::@661e937ce4f9d3fa350b",
+					"jsonFile" : "target-absl_stacktrace-Debug-2ebc5a15cb0ca04452d5.json",
+					"name" : "absl_stacktrace",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "absl_status::@c1257fb62a16293e8955",
+					"jsonFile" : "target-absl_status-Debug-9ca342576e48ccbfca89.json",
+					"name" : "absl_status",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "absl_str_format_internal::@40dcdb164f5eca7d74f6",
+					"jsonFile" : "target-absl_str_format_internal-Debug-ca499e70b7bf5f2a5a54.json",
+					"name" : "absl_str_format_internal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "absl_strings::@40dcdb164f5eca7d74f6",
+					"jsonFile" : "target-absl_strings-Debug-45ccfdb589b4af92278a.json",
+					"name" : "absl_strings",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "absl_strings_internal::@40dcdb164f5eca7d74f6",
+					"jsonFile" : "target-absl_strings_internal-Debug-68c913f859450c1fe1c8.json",
+					"name" : "absl_strings_internal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "absl_symbolize::@661e937ce4f9d3fa350b",
+					"jsonFile" : "target-absl_symbolize-Debug-228600e68edad2723617.json",
+					"name" : "absl_symbolize",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "absl_synchronization::@4e076f26d3adeded7f3a",
+					"jsonFile" : "target-absl_synchronization-Debug-c7c261f5cdc9391afd55.json",
+					"name" : "absl_synchronization",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "absl_throw_delegate::@c83f3e5a481f2bcefac8",
+					"jsonFile" : "target-absl_throw_delegate-Debug-a34622c6522eb6684c78.json",
+					"name" : "absl_throw_delegate",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "absl_time::@eaebfe3f746532af4ca1",
+					"jsonFile" : "target-absl_time-Debug-c4c1c6eb3c2ce6a036e7.json",
+					"name" : "absl_time",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "absl_time_zone::@eaebfe3f746532af4ca1",
+					"jsonFile" : "target-absl_time_zone-Debug-bdbc68b20de3a86806a5.json",
+					"name" : "absl_time_zone",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "acountry::@76aaa97747bafcc602fb",
+					"jsonFile" : "target-acountry-Debug-0bba9cf4392a10449c8f.json",
+					"name" : "acountry",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "address_sorting::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-address_sorting-Debug-4d253fe028479bec2579.json",
+					"name" : "address_sorting",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "adig::@76aaa97747bafcc602fb",
+					"jsonFile" : "target-adig-Debug-96e30f8a5ea89496d5ac.json",
+					"name" : "adig",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "ahost::@76aaa97747bafcc602fb",
+					"jsonFile" : "target-ahost-Debug-a4e44c101999bf7df07f.json",
+					"name" : "ahost",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "auth_grpc_proto::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-auth_grpc_proto-Debug-472e1deefcaa43bde82e.json",
+					"name" : "auth_grpc_proto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 23,
+					"id" : "bssl::@1d2aac4dbcac2e924d72",
+					"jsonFile" : "target-bssl-Debug-91fd6e35557c9692be10.json",
+					"name" : "bssl",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "c-ares::@76aaa97747bafcc602fb",
+					"jsonFile" : "target-c-ares-Debug-38424a3bd52e5c8dfb57.json",
+					"name" : "c-ares",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "check_epollexclusive::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-check_epollexclusive-Debug-ae03f97d49e96574c08d.json",
+					"name" : "check_epollexclusive",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 23,
+					"id" : "crypto::@1d2aac4dbcac2e924d72",
+					"jsonFile" : "target-crypto-Debug-ebb4e8be3f6813f929fd.json",
+					"name" : "crypto",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "example::@5c59ea97b5f5440f1cfc",
+					"jsonFile" : "target-example-Debug-f2a33e7db45e67699c2d.json",
+					"name" : "example",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "example64::@5c59ea97b5f5440f1cfc",
+					"jsonFile" : "target-example64-Debug-e5e9b174a132683358bd.json",
+					"name" : "example64",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gen_hpack_tables::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-gen_hpack_tables-Debug-d9d88824ea2563f10c49.json",
+					"name" : "gen_hpack_tables",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gen_legal_metadata_characters::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-gen_legal_metadata_characters-Debug-fbe1b304e8460fc3411a.json",
+					"name" : "gen_legal_metadata_characters",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gen_percent_encoding_tables::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-gen_percent_encoding_tables-Debug-53b39e2b33b20201ea9f.json",
+					"name" : "gen_percent_encoding_tables",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gpr::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-gpr-Debug-fe7c7a59469725b32c33.json",
+					"name" : "gpr",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc-Debug-b788a65709ecbed1ed73.json",
+					"name" : "grpc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc++::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc++-Debug-17d1cf120411f8f76ca9.json",
+					"name" : "grpc++",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc++_alts::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc++_alts-Debug-f9ddcc09127f3a126764.json",
+					"name" : "grpc++_alts",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc++_error_details::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc++_error_details-Debug-1229a8109730b45d6e8d.json",
+					"name" : "grpc++_error_details",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc++_reflection::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc++_reflection-Debug-3939d6c8e707dead1295.json",
+					"name" : "grpc++_reflection",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc++_unsecure::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc++_unsecure-Debug-d2baff442708f30bc1ec.json",
+					"name" : "grpc++_unsecure",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_cpp_plugin::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_cpp_plugin-Debug-a94f6592a02561c60237.json",
+					"name" : "grpc_cpp_plugin",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_create_jwt::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_create_jwt-Debug-81fc1854a10d5a59a3db.json",
+					"name" : "grpc_create_jwt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_cronet::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_cronet-Debug-263118aa74c317306d3e.json",
+					"name" : "grpc_cronet",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_csharp_ext::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_csharp_ext-Debug-de110935304b2a5ab088.json",
+					"name" : "grpc_csharp_ext",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_csharp_plugin::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_csharp_plugin-Debug-06060c85f75196e0b2b1.json",
+					"name" : "grpc_csharp_plugin",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_node_plugin::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_node_plugin-Debug-6c82e4e69a19af86d9a8.json",
+					"name" : "grpc_node_plugin",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_objective_c_plugin::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_objective_c_plugin-Debug-c1b22874ea678f251d26.json",
+					"name" : "grpc_objective_c_plugin",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_php_plugin::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_php_plugin-Debug-22cbdeb11dbc1aa82e0d.json",
+					"name" : "grpc_php_plugin",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_plugin_support::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_plugin_support-Debug-20e3089fbf1de30efbd4.json",
+					"name" : "grpc_plugin_support",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_print_google_default_creds_token::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_print_google_default_creds_token-Debug-db6a4a43b1fdcde046a3.json",
+					"name" : "grpc_print_google_default_creds_token",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_python_plugin::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_python_plugin-Debug-edc7793a94b954ab90e2.json",
+					"name" : "grpc_python_plugin",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_ruby_plugin::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_ruby_plugin-Debug-505218c5fa2a9b2551fa.json",
+					"name" : "grpc_ruby_plugin",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_unsecure::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_unsecure-Debug-d814cfe7158090c03722.json",
+					"name" : "grpc_unsecure",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpc_verify_jwt::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpc_verify_jwt-Debug-aaf19be20b7840d68888.json",
+					"name" : "grpc_verify_jwt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "grpcpp_channelz::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-grpcpp_channelz-Debug-2f168e847104595d027a.json",
+					"name" : "grpcpp_channelz",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "libprotobuf::@5db3d22c9e46963f097f",
+					"jsonFile" : "target-libprotobuf-Debug-5452a0705af90ad2b360.json",
+					"name" : "libprotobuf",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "libprotobuf-lite::@5db3d22c9e46963f097f",
+					"jsonFile" : "target-libprotobuf-lite-Debug-299d3288bd67d1f293e6.json",
+					"name" : "libprotobuf-lite",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "libprotoc::@5db3d22c9e46963f097f",
+					"jsonFile" : "target-libprotoc-Debug-d9ed853322f283350672.json",
+					"name" : "libprotoc",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "minigzip::@5c59ea97b5f5440f1cfc",
+					"jsonFile" : "target-minigzip-Debug-5df4d768c99d75fe7a10.json",
+					"name" : "minigzip",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "minigzip64::@5c59ea97b5f5440f1cfc",
+					"jsonFile" : "target-minigzip64-Debug-e966053a20adf9f73dc8.json",
+					"name" : "minigzip64",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "plugins::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-plugins-Debug-8c1ce2cc9e1199d426d0.json",
+					"name" : "plugins",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "protoc::@5db3d22c9e46963f097f",
+					"jsonFile" : "target-protoc-Debug-2b760eab01b81128e2a1.json",
+					"name" : "protoc",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 23,
+					"id" : "ssl::@1d2aac4dbcac2e924d72",
+					"jsonFile" : "target-ssl-Debug-4aac6774fb207ba3381c.json",
+					"name" : "ssl",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tools::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-tools-Debug-eefc07fe14a421abab5e.json",
+					"name" : "tools",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tools_c::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-tools_c-Debug-135e7066f6ffca27f283.json",
+					"name" : "tools_c",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tools_cxx::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-tools_cxx-Debug-309737633829f9c7c846.json",
+					"name" : "tools_cxx",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "upb::@37e56dcf5808cfe97076",
+					"jsonFile" : "target-upb-Debug-775e9ab8f52c2151746a.json",
+					"name" : "upb",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "zlib::@5c59ea97b5f5440f1cfc",
+					"jsonFile" : "target-zlib-Debug-228c8d0558dcb84776fa.json",
+					"name" : "zlib",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "zlibstatic::@5c59ea97b5f5440f1cfc",
+					"jsonFile" : "target-zlibstatic-Debug-a1ef4bddb4a094933dda.json",
+					"name" : "zlibstatic",
+					"projectIndex" : 6
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/media/dan/storage/projects/signalling-server-cpp/build",
+		"source" : "/media/dan/storage/projects/signalling-server-cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

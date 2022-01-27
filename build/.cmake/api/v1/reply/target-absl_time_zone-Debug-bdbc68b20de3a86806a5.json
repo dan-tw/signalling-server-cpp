@@ -1,0 +1,435 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "_deps/grpc-build/third_party/abseil-cpp/absl/time/libabsl_time_zone.a"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"absl_cc_library",
+			"target_compile_options",
+			"target_include_directories",
+			"set_property",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"build/_deps/grpc-src/third_party/abseil-cpp/CMake/AbseilHelpers.cmake",
+			"build/_deps/grpc-src/third_party/abseil-cpp/absl/time/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 61,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 193,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 188,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 207,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 170,
+				"parent" : 1
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fPIC"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Weverything"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-c++98-compat-pedantic"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-covered-switch-default"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-deprecated"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-disabled-macro-expansion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-double-promotion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-comma"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-extra-semi"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-extra-semi-stmt"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-packed"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-padded"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-sign-compare"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-float-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-float-equal"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-format-nonliteral"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-gcc-compat"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-global-constructors"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-exit-time-destructors"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-non-modular-include-in-module"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-old-style-cast"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-range-loop-analysis"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-reserved-id-macro"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-shorten-64-to-32"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-switch-enum"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-thread-safety-negative"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-unknown-warning-option"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-unreachable-code"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-unused-macros"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-weak-vtables"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-zero-as-null-pointer-constant"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wbitfield-enum-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wbool-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wconstant-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wenum-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wint-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wliteral-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wnon-literal-null-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wnull-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wobjc-literal-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-sign-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wstring-conversion"
+				},
+				{
+					"fragment" : "-std=gnu++11"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "/media/dan/storage/projects/signalling-server-cpp/build/_deps/grpc-src/third_party/abseil-cpp"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					5
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				3,
+				5,
+				7,
+				9,
+				11,
+				12,
+				15
+			]
+		}
+	],
+	"folder" : 
+	{
+		"name" : "Abseil/internal"
+	},
+	"id" : "absl_time_zone::@eaebfe3f746532af4ca1",
+	"name" : "absl_time_zone",
+	"nameOnDisk" : "libabsl_time_zone.a",
+	"paths" : 
+	{
+		"build" : "_deps/grpc-build/third_party/abseil-cpp/absl/time",
+		"source" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				3,
+				5,
+				7,
+				9,
+				11,
+				12,
+				15
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1,
+				4,
+				6,
+				8,
+				10,
+				13,
+				14,
+				16,
+				17
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_fixed.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_fixed.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_format.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_if.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_if.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_impl.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_impl.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_info.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_info.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_libc.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_libc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_lookup.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_posix.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_posix.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/tzfile.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/src/zone_info_source.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/include/cctz/time_zone.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 6,
+			"path" : "build/_deps/grpc-src/third_party/abseil-cpp/absl/time/internal/cctz/include/cctz/zone_info_source.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
