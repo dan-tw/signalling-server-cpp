@@ -1,7 +1,7 @@
 #include "server.h"
 
 
-WebSocketServer::WebSocketServer(net::io_context& ioContext, tcp::endpoint endpoint) : _ioContext(ioContext), _acceptor(ioContext), _err() {
+WebSocketServer::WebSocketServer(net::io_context& ioContext, tcp::endpoint endpoint) : _ioContext(ioContext), _acceptor(ioContext) {
 
     beast::error_code errorCode;
     _endpoint = endpoint;
@@ -9,34 +9,32 @@ WebSocketServer::WebSocketServer(net::io_context& ioContext, tcp::endpoint endpo
     // Open the acceptor
     _acceptor.open(_endpoint.protocol(), errorCode);
     if(errorCode) {
-        _err.fail(errorCode, "websocket: failed to open the acceptor");
+        fail(errorCode, "websocket: failed to open the acceptor");
         return;
     }
 
     // Allow address reuse
     _acceptor.set_option(net::socket_base::reuse_address(true), errorCode);
     if(errorCode) {
-        _err.fail(errorCode, "websocket: set_option failed enabling address resuse");
+        fail(errorCode, "websocket: set_option failed enabling address resuse");
         return;
     }
-}
-
-void WebSocketServer::Serve() {
-
-    beast::error_code errorCode;
 
     //  Bind to the server address
     _acceptor.bind(_endpoint, errorCode);
     if(errorCode) {
-        _err.fail(errorCode, "websocket: failed to bind to server address");
+        fail(errorCode, "websocket: failed to bind to server address");
     }
 
     // Start listening for connections
     _acceptor.listen(net::socket_base::max_listen_connections, errorCode);
     if(errorCode) {
-        _err.fail(errorCode, "websocket: failed to listen");
+        fail(errorCode, "websocket: failed to listen");
         return;
     }
+}
+
+void WebSocketServer::Serve() { 
 
     // Start accepting incoming connections
     accept();
@@ -48,7 +46,7 @@ void WebSocketServer::Stop() {
 
     _acceptor.close(errorCode);
     if(errorCode) {
-        _err.fail(errorCode, "websocket: failed to stop");
+        fail(errorCode, "websocket: failed to stop");
         return;
     }
 }
@@ -64,7 +62,7 @@ void WebSocketServer::accept() {
 void WebSocketServer::on_accept(beast::error_code errorCode, tcp::socket socket)
 {
     if(errorCode) {
-        _err.fail(errorCode, "websocket: failed on accept");
+        fail(errorCode, "websocket: failed on accept");
     } else {
         // Create the session and run it
         std::make_shared<WebSocketSession>(std::move(socket));
@@ -75,4 +73,6 @@ void WebSocketServer::on_accept(beast::error_code errorCode, tcp::socket socket)
 }
 
 
-WebSocketServer::~WebSocketServer() {}
+void WebSocketServer::fail(boost::beast::error_code errorCode, std::string obj) {
+    std::cerr << obj << ": " << errorCode.message() << "\n";
+}

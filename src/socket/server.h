@@ -29,18 +29,17 @@ class WebSocketServer : public std::enable_shared_from_this<WebSocketServer> {
         // The endpoint to bind to
         tcp::endpoint _endpoint;
 
-        // Handle errors 
-        WebSocketError _err;
-
         // begins accepting connections
         void accept();
 
         // called when we accept and kicks off the session
         void on_accept(beast::error_code errorCode, tcp::socket socket);
 
+        void fail(boost::beast::error_code errorCode, std::string obj);
+
     public:
         WebSocketServer(net::io_context& ioc, tcp::endpoint endpoint);
-        ~WebSocketServer();
+        ~WebSocketServer() = default;
 
         // Bind and listen
         void Serve();

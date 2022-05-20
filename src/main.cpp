@@ -17,24 +17,23 @@ int main(int argc, char* argv[]) {
 
     auto const address = net::ip::make_address("0.0.0.0");
     unsigned short port = 8081;
-    auto const threads = std::max<int>(1, 1);
+    int const threads = 2;
 
     // The io_context is required for all I/O
-    net::io_context ioc{threads};
+    net::io_context ioContext{threads};
 
     // Create and launch a listening port
-    std::make_shared<WebSocketServer>(ioc, tcp::endpoint{address, port})->Serve();
+    std::make_shared<WebSocketServer>(ioContext, tcp::endpoint{address, port})->Serve();
 
     // Run the I/O service on the requested number of threads
     std::vector<std::thread> v;
     v.reserve(threads - 1);
-    for(auto i = threads - 1; i > 0; --i)
-        v.emplace_back(
-        [&ioc]
-        {
-            ioc.run();
+    for(auto i = threads - 1; i > 0; --i) {
+        v.emplace_back([&ioContext] {
+            ioContext.run();
         });
-    ioc.run();
+    }
+    ioContext.run();
 
     return EXIT_SUCCESS;
 

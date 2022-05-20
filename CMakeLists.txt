@@ -18,7 +18,7 @@ set(_PROTOBUF_LIBPROTOBUF libprotobuf)
 set(_REFLECTION grpc++_reflection)
 set(_PROTOBUF_PROTOC $<TARGET_FILE:protoc>)
 set(_GRPC_GRPCPP grpc++)
-set(CMAKE_CXX_FLAGS_DEBUG_INIT)
+#set(CMAKE_CXX_FLAGS_DEBUG_INIT "-g -O0")
 
 # message(FATAL_ERROR $<TARGET_FILE:protoc>)
 
@@ -77,4 +77,5 @@ target_link_libraries(SignallingServer
     ${_GRPC_GRPCPP}
     ${_PROTOBUF_LIBPROTOBUF}
     ${Boost_LIBRARIES}
+    #${CMAKE_CXX_FLAGS_DEBUG_INIT}
 )

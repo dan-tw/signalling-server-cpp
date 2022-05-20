@@ -1,7 +1,7 @@
 
 #include "session.h"
 
-WebSocketSession::WebSocketSession(tcp::socket&& socket) : _ws(std::move(socket)), _err() {
+WebSocketSession::WebSocketSession(tcp::socket&& socket) : _ws(std::move(socket)) {
     
     // We need to be executing within a strand to perform async operations
     // on the I/O objects in this session. Although not strictly necessary
@@ -27,7 +27,7 @@ void WebSocketSession::run() {
 void WebSocketSession::on_accept(beast::error_code errorCode) {
 
     if(errorCode) {
-        _err.fail(errorCode, "websocket session: failed on accept");
+        fail(errorCode, "websocket session: failed on accept");
         return;
     }
 
@@ -51,7 +51,7 @@ void WebSocketSession::on_read(beast::error_code errorCode, std::size_t bytes_tr
     }
 
     if(errorCode) {
-        _err.fail(errorCode, "websocket session: failed on read");
+        fail(errorCode, "websocket session: failed on read");
         return;
     }
 
@@ -65,7 +65,7 @@ void WebSocketSession::on_write(beast::error_code ec, std::size_t bytes_transfer
     boost::ignore_unused(bytes_transferred);
 
     if(ec) {
-        _err.fail(ec, "websocket session: failed on write");
+        fail(ec, "websocket session: failed on write");
         return;
     }
 
@@ -76,4 +76,6 @@ void WebSocketSession::on_write(beast::error_code ec, std::size_t bytes_transfer
     read();
 }
 
-WebSocketSession::~WebSocketSession() {}
+void WebSocketSession::fail(boost::beast::error_code errorCode, std::string obj) {
+    std::cerr << obj << ": " << errorCode.message() << "\n";
+}

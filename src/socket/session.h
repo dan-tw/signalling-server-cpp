@@ -21,9 +21,6 @@ class WebSocketSession : public std::enable_shared_from_this<WebSocketSession> {
         // Buffer
         beast::flat_buffer _buffer;
 
-        // Handle errors 
-        WebSocketError _err;
-
         void run();
 
         void on_accept(beast::error_code ec);
@@ -33,9 +30,11 @@ class WebSocketSession : public std::enable_shared_from_this<WebSocketSession> {
         void on_read(beast::error_code ec, std::size_t bytes_transferred);
 
         void on_write(beast::error_code ec, std::size_t bytes_transferred);
+
+        void fail(boost::beast::error_code errorCode, std::string obj);
        
 
     public:
-        WebSocketSession(tcp::socket&& socket);
-        ~WebSocketSession();
+        explicit WebSocketSession(tcp::socket&& socket);
+        ~WebSocketSession() = default;
 };
