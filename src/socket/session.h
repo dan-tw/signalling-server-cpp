@@ -23,6 +23,8 @@ class WebSocketSession : public std::enable_shared_from_this<WebSocketSession> {
 
         void run();
 
+        void on_run();
+
         void on_accept(beast::error_code ec);
 
         void read();

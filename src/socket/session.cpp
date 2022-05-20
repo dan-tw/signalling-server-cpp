@@ -1,16 +1,18 @@
 
 #include "session.h"
 
-WebSocketSession::WebSocketSession(tcp::socket&& socket) : _ws(std::move(socket)) {
+WebSocketSession::WebSocketSession(tcp::socket&& socket) : _ws(std::move(socket)) {}
+
+void WebSocketSession::run() {
     
     // We need to be executing within a strand to perform async operations
     // on the I/O objects in this session. Although not strictly necessary
     // for single-threaded contexts, this example code is written to be
     // thread-safe by default.
-    net::dispatch(_ws.get_executor(), beast::bind_front_handler(&WebSocketSession::run, shared_from_this()));
+    net::dispatch(_ws.get_executor(), beast::bind_front_handler(&WebSocketSession::on_run, shared_from_this()));
 }
 
-void WebSocketSession::run() {
+void WebSocketSession::on_run() {
 
     // Set suggested timeout settings for the websocket
     _ws.set_option(websocket::stream_base::timeout::suggested(beast::role_type::server));
