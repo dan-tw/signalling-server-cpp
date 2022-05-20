@@ -1,14 +1,44 @@
+#include <boost/beast/core.hpp>
+#include <thread>
 #include <grpcpp/grpcpp.h>
 #include "signalling/server.h"
 #include <boost/thread/mutex.hpp>
-//#include "socket/server.h"
+#include "socket/server.h"
 
 
 using grpc::Channel;
 using grpc::ClientContext;
 using grpc::Status;
 
-int main() {
+namespace net = boost::asio;            // from <boost/asio.hpp>
+
+int main(int argc, char* argv[]) {
+
+
+    auto const address = net::ip::make_address("0.0.0.0");
+    unsigned short port = 8081;
+    auto const threads = std::max<int>(1, 1);
+
+    // The io_context is required for all I/O
+    net::io_context ioc{threads};
+
+    // Create and launch a listening port
+    std::make_shared<WebSocketServer>(ioc, tcp::endpoint{address, port})->Serve();
+
+    // Run the I/O service on the requested number of threads
+    std::vector<std::thread> v;
+    v.reserve(threads - 1);
+    for(auto i = threads - 1; i > 0; --i)
+        v.emplace_back(
+        [&ioc]
+        {
+            ioc.run();
+        });
+    ioc.run();
+
+    return EXIT_SUCCESS;
+
+
 
     //SignallingServer ss(grpc::CreateChannel("127.0.0.1:55771", grpc::InsecureChannelCredentials()));
     //proto::AuthenticationResponse response;

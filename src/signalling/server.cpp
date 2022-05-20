@@ -1,7 +1,7 @@
 
 #include "server.h"
 
-SignallingServer::SignallingServer() {
+SignallingServer::SignallingServer() : sock(ioc) {
       // make a thread for the authentication plugin
 
       // make a thead for the auth connection

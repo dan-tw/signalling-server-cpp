@@ -18,6 +18,7 @@ set(_PROTOBUF_LIBPROTOBUF libprotobuf)
 set(_REFLECTION grpc++_reflection)
 set(_PROTOBUF_PROTOC $<TARGET_FILE:protoc>)
 set(_GRPC_GRPCPP grpc++)
+set(CMAKE_CXX_FLAGS_DEBUG_INIT)
 
 # message(FATAL_ERROR $<TARGET_FILE:protoc>)
 
@@ -62,7 +63,12 @@ FIND_PACKAGE( Boost 1.71 COMPONENTS program_options REQUIRED )
 INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
 # add the executable
-add_executable(SignallingServer src/main.cpp src/signalling/server.cpp)
+add_executable(SignallingServer
+src/main.cpp
+src/signalling/server.cpp
+src/socket/server.cpp
+src/socket/session.cpp
+src/socket/error.cpp)
 
 # add link libaries
 target_link_libraries(SignallingServer 

@@ -1,4 +1,5 @@
 #include <grpcpp/grpcpp.h>
+#include <boost/beast.hpp>
 
 #include "../../build/gen/auth.grpc.pb.h"
 
@@ -8,6 +9,7 @@ using grpc::Status;
 using proto::AuthenticationPlugin;
 using proto::AuthenticationRequest;
 using proto::AuthenticationResponse;
+using namespace boost::beast::websocket;
 
 class SignallingServer {
 
@@ -19,6 +21,10 @@ class SignallingServer {
         //AuthenticationResponse Authenticate(const std::string& token, const std::string& provider);
 
     private:
+    //instanceServer websocket
+    //playerServer websocket
+        boost::asio::io_context ioc;
+        boost::beast::tcp_stream sock;
         int port;
 
         //std::unique_ptr<AuthenticationPlugin::Stub> stub_;
